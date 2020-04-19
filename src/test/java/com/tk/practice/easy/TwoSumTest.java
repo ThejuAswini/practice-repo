@@ -11,11 +11,10 @@ class TwoSumTest {
 
     @Test
     void twoSum() {
-        int[] a = {6, 11, 15, 7, 2};
-        int[] expected = {3,4};
+        int[] a = {3, 2, 4};
+        int[] expected = {1, 2};
 
-        Assertions.assertArrayEquals(expected, testObj.twoSum(a, 9));
-
+        Assertions.assertArrayEquals(expected, testObj.twoSum(a, 6));
 
     }
 }

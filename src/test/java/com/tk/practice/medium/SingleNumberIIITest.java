@@ -16,8 +16,9 @@ class SingleNumberIIITest {
         int[] num = {2, 2, 1, 1, 3, 3, 6, 4};
 
         int[] result = testObj.singleNumber(num);
+        int[] expectedResult = {4, 6};
 
-        Assertions.assertEquals(4, result);
+        Assertions.assertArrayEquals(expectedResult, result);
     }
 
     @Test

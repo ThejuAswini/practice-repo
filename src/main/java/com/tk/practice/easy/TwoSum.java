@@ -1,8 +1,7 @@
 package com.tk.practice.easy;
 
-import java.util.Hashtable;
+import java.util.HashMap;
 
-// LeetCode pblm# 1
 public class TwoSum {
 
     /*public int[] twoSum(int[] nums, int target) {
@@ -23,20 +22,27 @@ public class TwoSum {
     } */
 
     public int[] twoSum(int[] nums, int target){
-        Hashtable<Integer, Integer> hashtable = new Hashtable<Integer, Integer>();
+        HashMap<Integer, Integer> hashMap = new HashMap<>();
         int[] result = new int[2];
 
         for(int i = 0; i < nums.length; i++){
-            hashtable.put(nums[i], i);
+            hashMap.put(nums[i], i);
         }
 
         for (int i = 0; i < nums.length; i++){
             int temp = target - nums[i];
 
-            if(hashtable.containsKey(target)){
-                result[0] = i;
-                result[1] = hashtable.get(target);
+            if (temp != nums[i]){
+                if(hashMap.containsKey(temp)){
+                    result[0] = i;
+                    result[1] = hashMap.get(temp);
+                    break;
+                }
             }
+            else {
+
+            }
+
         }
         return result;
     }
