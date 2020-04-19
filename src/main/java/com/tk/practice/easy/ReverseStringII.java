@@ -4,27 +4,7 @@ public class ReverseStringII {
 
     public String reverseStr(String s, int k) {
 
-        if (s.length() < k){
-            return s;
-        }
-        else if (s.length() == k){
-            reverseString(s);
-            return s;
-        }
-        else {
-            if (s.length() > 2*k){
-                for (int i = 0; i < s.length(); i++){
-
-                }
-            }
-            else if (s.length() == 2*k){
-
-            }
-            else {
-
-            }
-
-        }
+        return " ";
     }
 
     // Reverse String
