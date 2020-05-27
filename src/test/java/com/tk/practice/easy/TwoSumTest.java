@@ -11,8 +11,8 @@ class TwoSumTest {
 
     @Test
     void twoSum() {
-        int[] a = {3, 2, 4};
-        int[] expected = {1, 2};
+        int[] a = {3, 3, 4};
+        int[] expected = {0, 1};
 
         Assertions.assertArrayEquals(expected, testObj.twoSum(a, 6));
 
