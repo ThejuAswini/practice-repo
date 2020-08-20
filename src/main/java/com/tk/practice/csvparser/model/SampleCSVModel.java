@@ -1,5 +1,7 @@
 package com.tk.practice.csvparser.model;
 
+import java.util.Objects;
+
 public class SampleCSVModel {
 
     private String seriesReference;
@@ -46,6 +48,23 @@ public class SampleCSVModel {
 
     public void setInitiallyPublished(Integer initiallyPublished) {
         this.initiallyPublished = initiallyPublished;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        SampleCSVModel that = (SampleCSVModel) o;
+        return Objects.equals(seriesReference, that.seriesReference) &&
+                Objects.equals(period, that.period) &&
+                Objects.equals(description, that.description) &&
+                Objects.equals(revised, that.revised) &&
+                Objects.equals(initiallyPublished, that.initiallyPublished);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(seriesReference, period, description, revised, initiallyPublished);
     }
 
     @Override
