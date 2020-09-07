@@ -1,4 +1,4 @@
-package com.tk.practice.trees;
+package com.tk.practice.trees.binarytrees;
 
 public class Node {
     int data;
@@ -79,3 +79,4 @@ public class Node {
         System.out.println(data);
     }
 }
+
