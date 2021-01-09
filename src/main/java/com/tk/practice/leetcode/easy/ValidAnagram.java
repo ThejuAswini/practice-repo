@@ -1,10 +1,12 @@
 package com.tk.practice.leetcode.easy;
 
+import java.util.Arrays;
+
 public class ValidAnagram {
 
     public boolean isAnagram(String s, String t){
 
-        if (s.length() != t.length()) return false;
+        /*if (s.length() != t.length()) return false;
 
         int[] count = new int[255];
 
@@ -19,6 +21,14 @@ public class ValidAnagram {
             }
         }
 
-        return true;
+        return true;*/
+
+        char[] sChars = s.toCharArray();
+        char[] tChars = t.toCharArray();
+
+        Arrays.sort(sChars);
+        Arrays.sort(tChars);
+
+        return Arrays.equals(sChars, tChars);
     }
 }
